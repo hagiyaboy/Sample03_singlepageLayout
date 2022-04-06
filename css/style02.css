@@ -103,6 +103,10 @@ ABOUT
 /* -------------------------------------------------------------
 WORKS
 ------------------------------------------------------------- */
+.heading.works-border::before,
+.heading.works-border::after{
+    border-bottom: 1px dashed #fff;
+}
 .works {
     background-color: #383634;
     padding: 80px 0;
@@ -149,8 +153,10 @@ WORKS
     position: absolute;
     top: 50%;
     left: 0;
+    z-index: 1;
     width: 100%;
     height: 50%;
+    overflow-y: auto;
 }
 .work-description-inner {
     display: table;
@@ -174,9 +180,45 @@ WORKS
     background-color: rgba(255, 255, 255, 0.15);
 }
 .work-box:nth-child(odd) .work-image {
-    margin: 60% 0 0;
+    margin: 50% 0 0;
 }
 .work-box:nth-child(odd) .work-description,
 .work-box:nth-child(odd)::after {
     top: 0;
+}
+
+/* -------------------------------------------------------------
+MY SKILLS
+------------------------------------------------------------- */
+.skills {
+    padding: 80px 0;
+    background-color: #fff;
+    color: #333
+}
+.skills-wrapper {
+    display: table;
+    width: 80%;
+    margin: 50px auto 0;
+    table-layout: fixed;
+}
+.skill-box {
+    display: table-cell;
+}
+.skill-icon {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 30px;
+    border: 4px solid;
+    border-radius: 50%;
+    color: #f1b400;
+    font-size: 8rem;
+    line-height: 142px;
+}
+.skill-title {
+    margin: 0 20px 20px;
+    font-size: 2rem;
+}
+.skill-text {
+    margin: 0 20px;
+    line-height: 2;
 }
